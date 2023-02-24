@@ -1,9 +1,3 @@
-import express from "express";
-const app = express();
- 
-app.get("/", function (req, res) {
-  res.send("Hello World");
-});
-
-console.info(`Server is running on port 3000`);
-app.listen(3000);
+export function fibonacci(n: number): number {
+  return n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2);
+}
